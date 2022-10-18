@@ -18,6 +18,5 @@
 # print(int(sum_digits))
 
 
-
 num = str(input("Введите число: ")).replace('.', '')
 print(sum(list(map(int, num))))
