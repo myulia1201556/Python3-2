@@ -22,5 +22,5 @@
 
 
 
-numbers = str(input("Введите вещественное число: ")).replace('.', '')
-print(sum(list(map(int, numbers))))
+num = str(input("Введите число: ")).replace('.', '')
+print(sum(list(map(int, num))))
