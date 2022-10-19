@@ -6,21 +6,16 @@
 # 1113384455229 -> [8,9]
 # 1115566773322 -> []
 
-# from collections import Counter 
-# from random import randint
+from collections import Counter 
+from random import randint
 
-# len_list = int(input("Введите количество элементов списка: "))
+len_list = int(input("Введите количество элементов списка: "))
 
+input_list = [randint(-len_list, len_list) for i in range(len_list)]
+output_list = [len_list for len_list, v in Counter(input_list).items() if v == 1]
 
-# def creat_list(len_list):
-#     return [randint(-len_list, len_list) for i in range(len_list)]
-
-
-# input_list = creat_list(len_list)
-# output_list = [len_list for len_list, v in Counter(input_list).items() if v == 1]
-
-# print(input_list)
-# print(output_list)
+print(input_list)
+print(output_list)
 
 
 # import random
@@ -52,20 +47,3 @@
 #     return result
 
 # print(uniq_elem(list))
-
-
-from collections import Counter 
-from random import randint
-
-len_list = int(input("Введите количество элементов списка: "))
-
-
-def creat_list(len_list):
-    return [randint(-len_list, len_list) for i in range(len_list)]
-
-
-input_list = creat_list(len_list)
-output_list = [len_list for len_list, v in Counter(input_list).items() if v == 1]
-
-print(input_list)
-print(output_list)

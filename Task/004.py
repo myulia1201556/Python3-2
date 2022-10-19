@@ -1,20 +1,20 @@
-# 4. Задайте список из N элементов, заполненных числами из промежутка [-N, N].
-#  Найдите произведение элементов на указанных позициях. 
-#  Позиции хранятся в файле file.txt в одной строке одно число.
+# Задайте список из нескольких чисел. 
+# Напишите программу, которая найдёт сумму элементов списка, 
+# стоящих на нечётной позиции.
+# Пример:
+# [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
-import random
 
-print('Введите число элементов в списке N: ')
-N = int (input())
-arr = []
+# list = [2, 3, 5, 9, 3]
+# count = 0
 
-for _ in range(N):
-    arr.append(random.randint(-N, N))
-print(arr)
+# for i in range (1, len(list), 2):
+#           count += list[i]
+# print (f"{list} - сумма элементов списка на нечётных позициях равна: {count}")  
 
-x = []
-with open("file.txt", "r") as data:
-   x = data.read().split("\n")
-result = arr[int(x[0])] * arr[int(x[1])]
 
-print(result)
+from random import sample
+
+num = int(input("Введите размер списка: "))
+list = sample(range(1, num * 2), num)
+print(f"{list} \nСумма: {sum(list[1: :2])}")
