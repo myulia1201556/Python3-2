@@ -15,6 +15,7 @@
 #     print(result)
 
 
+
 num = int(input("Введите размер списка: "))
 list = [round((1+1/i)**i) for i in range(1, num+1)]
 print(f"{list} \nСумма: {round(sum(list))}")
